@@ -1,4 +1,3 @@
-# Complete project details at https://RandomNerdTutorials.com
 
 try:
   import usocket as socket
@@ -15,8 +14,8 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-ssid = 'REPLACE_WITH_YOUR_SSID'
-password = 'REPLACE_WITH_YOUR_PASSWORD'
+ssid = 'ssid'
+password = 'passwd'
 
 station = network.WLAN(network.STA_IF)
 
@@ -29,5 +28,4 @@ while station.isconnected() == False:
 print('Connection successful')
 print(station.ifconfig())
 
-sensor = dht.DHT22(Pin(14))
-#sensor = dht.DHT11(Pin(14))
+sensor = dht.DHT11(Pin(2))
