@@ -18,7 +18,7 @@ ssid = 'ssid'
 password = 'passwd'
 station = network.WLAN(network.STA_IF)
 station.active(True)
-#station.ifconfig(('192.168.1.2','255.255.255.0','192.168.1.1','8.8.8.8'))
+#station.ifconfig(config=('192.168.1.2','255.255.255.0','192.168.1.1','8.8.8.8'))
 station.connect(ssid, password)
 
 while station.isconnected() == False:
